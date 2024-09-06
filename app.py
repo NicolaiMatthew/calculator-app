@@ -1,8 +1,8 @@
-from flask import Flask
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 
 def hello_world():
-    return "<p>Hello world!</p>"
+    return render_template('index.html')
