@@ -9,11 +9,11 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <form>
-            <label for="fnum">First Number</label><br>
-            <input type="text" id="fnum" name="fnum" placeholder="1234"><br>
-            <label for="snum">Second Number</label><br>
-            <input type="text" id="snum" name="snum" placeholder="4321"><br><br>
+        <form action="{{url_for("hello_world")}}" method="post">
+            <label for="firstnum">First Number</label><br>
+            <input type="text" id="firstnum" name="fnum" placeholder="1234"><br>
+            <label for="secondnum">Second Number</label><br>
+            <input type="text" id="secondnum" name="snum" placeholder="4321"><br><br>
             <input type="submit" value="Add">
           </form>
         
