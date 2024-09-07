@@ -6,7 +6,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="/static/stylesheets/style.css">
     </head>
     <body>
         <form action="{{url_for("hello_world")}}" method="post">
@@ -14,10 +14,10 @@
             <input type="text" id="firstnum" name="fnum" placeholder="1234"><br>
             <label for="secondnum">Second Number</label><br>
             <input type="text" id="secondnum" name="snum" placeholder="4321"><br><br>
-            <button type="submit" name="action" value="add">Add</button>
-            <button type="submit" name="action" value="subtract">Subtract</button>
-            <button type="submit" name="action" value="multiply">Multiply</button>
-            <button type="submit" name="action" value="divide">Divide</button><br/>
+            <button class= "button-11" type="submit" name="action" value="add">Add</button>
+            <button class= "button-11" type="submit" name="action" value="subtract">Subtract</button>
+            <button class= "button-11" type="submit" name="action" value="multiply">Multiply</button>
+            <button class= "button-11" type="submit" name="action" value="divide">Divide</button><br/>
             <h2>Result: {{result}}</h2>
           </form>
         
