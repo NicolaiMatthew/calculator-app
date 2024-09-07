@@ -7,11 +7,25 @@ app = Flask(__name__)
 def hello_world():
     if request.method == "POST":
         # Getting first number
-        first_num = request.form.get('fnum')
+        first_num = int(request.form.get('fnum'))
         # Getting second number
-        second_num = request.form.get('snum')
-        # Adding the number together
-        sum = int(first_num) + int(second_num)
+        second_num = int(request.form.get('snum'))
+        # Conditional for button press
+        if request.form['action'] == 'add':
+            sum = first_num + second_num
+            return "Result : %d" % sum
+        elif request.form['action'] == 'subtract':
+            difference = first_num - second_num
+            return "Restult : %d" % difference
+        elif request.form['action'] == 'multiply':
+            product = first_num * second_num
+            return "Result : %d" % product
+        elif request.form['action'] == 'divide':
+            if first_num == 0 or second_num == 0:
+                return "Division by 0!"
+            else:
+                quotient = first_num // second_num
+                return "Result: %d" % quotient
         return "Your total is: %d" % sum
         
     return render_template('index.html')
